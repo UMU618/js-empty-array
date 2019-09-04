@@ -32,51 +32,51 @@ while (array.length > 0) {
 
 See [index.htm](index.htm)
 
-Wrong cases:
+Unexpect cases: 2nd loop, arr === temp, empty temp, will empty arr.
 
 ```js
-// Wrong:
+// Unexpect
 temp.splice(0, temp.length)
 ```
 
 ```js
-// Wrong:
+// Unexpect
 temp.length = 0
 ```
 
 ```js
-// Wrong:
+// Unexpect
 temp.splice(0, temp.length)
 temp.length = 0
 ```
 
 ```js
-// Wrong:
+// Unexpect
 temp.splice(0, temp.length)
 temp = []
 ```
 
 ```js
-// Wrong:
+// Unexpect
 temp.length = 0
 temp = []
 ```
 
-Right cases:
+Expect cases: 2nd loop, empty temp, won't empty arr.
 
 ```js
-// Right:
+// Expect
 temp = []
 ```
 
 ```js
-// Right:
+// Expect
 temp = []
 temp.splice(0, temp.length)
 ```
 
 ```js
-// Right:
+// Expect
 temp = []
 temp.length = 0
 ```
