@@ -11,7 +11,7 @@
   let temp = []
 
   const test = (n) => {
-    console.log(n)
+    //console.log(n)
     temp.push(n)
   }
 
@@ -23,12 +23,15 @@
   }
 
   for (let i = 0; i < 2; ++i) {
+    console.log('arr =', arr)
+    console.log('temp =', temp)
     //temp.splice(0, temp.length)
     //temp.length = 0
-    // **** above is wrong ****
+    // **** above is unexpected: 2nd loop, empty temp, will empty arr ****
     temp = []
   
     console.log('arr =', arr)
+    console.log('temp =', temp)
     for (let j = 0; j < arr.length; ++j) {
       test(new Data(arr[j].x, arr[j].y))
     }
