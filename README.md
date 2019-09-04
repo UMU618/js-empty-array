@@ -46,7 +46,7 @@ temp.length = 0
 
 ```js
 // Wrong:
-temp.length = 0
+temp.splice(0, temp.length)
 temp.length = 0
 ```
 
