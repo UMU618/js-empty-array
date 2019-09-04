@@ -1,0 +1,41 @@
+<script type="text/javascript">
+
+  class Data {
+    constructor(x, y) {
+      this.x = x
+      this.y = y
+    }
+  }
+  
+  let arr = [new Data(1, 2), new Data(2, 3)]
+  let temp = []
+
+  const test = (n) => {
+    console.log(n)
+    temp.push(n)
+  }
+
+  const print = (arr) => {
+    arr.forEach(element => {
+      document.write(' (' + element.x + ', ' + element.y + ')')
+    });
+    document.write('<br />')
+  }
+
+  for (let i = 0; i < 2; ++i) {
+    //temp.splice(0, temp.length)
+    //temp.length = 0
+    // **** above is wrong ****
+    temp = []
+  
+    console.log('arr =', arr)
+    for (let j = 0; j < arr.length; ++j) {
+      test(new Data(arr[j].x, arr[j].y))
+    }
+    console.log('temp =', temp)
+    arr = temp
+    document.write(i + ': ')
+    print(arr)
+  }
+  
+</script>
