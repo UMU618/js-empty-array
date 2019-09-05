@@ -28,7 +28,35 @@ while (array.length > 0) {
 }
 ```
 
-## Problem
+## Why choose Method 1?
+
+Method 1 only reassign a:
+
+```
+let a = [1, 2, 3]
+let b = a
+
+// empty a, but doesn't affect b
+a = []
+
+console.log('a =', a)
+console.log('b =', b)
+```
+
+Method 2, 3, 4, empty multiple variables referencing the same object:
+
+```
+let a = [1, 2, 3]
+let b = a
+
+// empty a and b
+a.length = 0
+
+console.log('a =', a)
+console.log('b =', b)
+```
+
+## Example
 
 See [index.htm](index.htm)
 
@@ -62,7 +90,7 @@ temp.length = 0
 temp = []
 ```
 
-Expect cases: 2nd loop, empty temp, won't empty arr.
+Expect cases: 2nd loop, reassign temp, won't affect arr.
 
 ```js
 // Expect
