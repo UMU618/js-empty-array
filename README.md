@@ -28,7 +28,7 @@ while (array.length > 0) {
 }
 ```
 
-## Why choose Method 1?
+## Difference between Method 1 and the others
 
 Method 1 only reassign a:
 
@@ -43,7 +43,7 @@ console.log('a =', a)
 console.log('b =', b)
 ```
 
-Method 2, 3, 4, empty multiple variables referencing the same object:
+Method 2, 3, 4, will empty multiple variables referencing the same object:
 
 ```
 let a = [1, 2, 3]
