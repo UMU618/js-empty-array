@@ -1,4 +1,6 @@
-# How do I empty an array in JavaScript? I choose = []
+# How to empty an array in JavaScript?
+
+When I write [pathfinding](https://blog.umu618.com/pathfinding/) codes in JavaScript, I ran into this problem: how to empty the array?
 
 ## Methods
 
